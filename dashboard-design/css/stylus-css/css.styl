@@ -1,0 +1,84 @@
+// out: ../app.css, sourcemap: false, compress: true
+
+//Normalize && Reset
+@import "reset.styl"
+
+// Global variables
+bg-black = #353638
+bg-white = #F4F4F4
+hover-black = #1E202C
+menu-blue = #8796B8
+// Styles
+html
+  width 100%
+  height 100%
+  font-size 62.5% // 10px
+
+body
+  width 100%
+  height 100%
+  font-family 'Montserrat', sans-serif
+  font-size 16px
+  font-size 1.6rem // 16px
+  background-color yellow
+
+///////////////////////
+.container
+  height 100%;
+  width 100%
+  overflow auto
+
+nav
+  float left
+  width 32rem
+  height 100%
+  background-color bg-black
+  color white
+
+#user-profile
+  height 18rem
+  text-align center
+  img
+    margin-top 20px;
+    height 80px
+    border-radius 50%
+    margin-bottom: 20px
+
+
+.menu-items
+  background-color bg-black
+  text-align center
+  overflow hidden
+  li
+    min-width 100%
+    height 8rem
+    line-height 8rem
+    font-weight bold
+    border-bottom 1px solid #777
+  li:hover
+    background-color hover-black
+
+/////////////////////////////////
+
+.content
+  margin-left 32rem
+  padding-left 3rem
+  padding-top 3rem;
+  max-width 100%
+  height 100%;
+  background-color bg-white
+
+
+.basic-widget
+  background-color bg-black
+  height 20rem
+  width 20rem
+  padding 2rem
+  color white
+  h4
+    text-align center
+    margin-bottom 2rem
+  p
+    margin-top 2rem
+
+.cpu-widget

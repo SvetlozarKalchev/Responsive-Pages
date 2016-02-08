@@ -3,9 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <title>Dashboard</title>
-  <link rel="stylesheet" href="app.css">
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="./css/app.css">
 </head>
 <body>
+  <div class="container">
+
+    <nav>
+        <div id="user-profile">
+          <img src="http://oha.link/jd8p">
+          <p>Welcome, {username}</p>
+        </div>
+
+        <hr>
+
+        <ul class="menu-items">
+          <li>Dashboard</li>
+          <li>Load Statistics</li>
+          <li>Server Data</li>
+          <li>Settings</li>
+          <li>Log out</li>
+        </ul>
+    </nav>
+
+    <div class="content">
+
+        <div class="basic-widget">
+          <h4>RAM</h4>
+          <hr>
+          <p>Amount: {value}</p>
+          <p>Taken: {value}</p>
+          <p>Free: {value}</p>
+        </div>
+
+        <div class="cpu-widget">
+          <h4>RAM</h4>
+          <hr>
+          <p>Amount: {value}</p>
+          <p>Taken: {value}</p>
+          <p>Free: {value}</p>
+        </div>
+
+    </div>
+
+    <div style="clear: both"></div>
+</div>
 
 </body>
 </html>

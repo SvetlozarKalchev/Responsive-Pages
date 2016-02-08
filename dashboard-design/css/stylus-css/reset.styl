@@ -1,0 +1,53 @@
+// * { } doesn't apply to pseudo elements
+*, *:before, *:after
+  box-sizing border-box
+
+html
+  -ms-text-size-adjust 100%
+  -webkit-text-size-adjust 100%
+
+body
+  margin 0
+  font 16px/1 Helvetica, Arial, sans-serif
+  -moz-osx-font-smoothing grayscale
+  -webkit-font-smoothing antialiased
+
+h1, h2, h3, h4, p, ol, ul, hr
+  margin 0
+  padding 0
+
+h1, h2, h3, h4
+  font-size inherit
+
+li
+  display block;
+
+strong
+  font-weight bold
+
+a, button
+  color inherit
+  transition .3s
+
+a
+  text-decoration none
+
+a:active, a:hover
+  outline 0
+
+img
+  max-width 100%
+  height auto
+  border 0
+
+button
+  overflow visible
+  border 0
+  font inherit
+  -webkit-font-smoothing inherit
+  background none
+  cursor pointer
+
+::-moz-focus-inner
+  padding 0
+  border 0

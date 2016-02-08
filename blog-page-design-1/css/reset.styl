@@ -1,6 +1,4 @@
-// out: app.css, sourcemap: false, compress: false
-/* Normalize && Reset */
-//* { } doesn't apply to pseudo elements
+// * { } doesn't apply to pseudo elements
 *, *:before, *:after
   box-sizing border-box
 
@@ -14,7 +12,7 @@ body
   -moz-osx-font-smoothing grayscale
   -webkit-font-smoothing antialiased
 
-h1, h2, h3, h4, p, ol, ul
+h1, h2, h3, h4, p, ol, ul, hr
   margin 0
   padding 0
 
@@ -34,6 +32,9 @@ a, button
 a
   text-decoration none
 
+a:active, a:hover
+  outline 0
+
 img
   max-width 100%
   height auto
@@ -50,6 +51,3 @@ button
 ::-moz-focus-inner
   padding 0
   border 0
-/* Styles */
-html
-  background-color green
