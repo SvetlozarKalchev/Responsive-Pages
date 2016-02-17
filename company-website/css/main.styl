@@ -1,12 +1,18 @@
 // out: main.css, sourcemap: false, compress: true
-@import url(https://fonts.googleapis.com/css?family=Montserrat);
-
-html, body
+html
   margin 0px
   padding 0px
   width 100%
-  height 100%
+  height auto
   font-size 62.5%
+  overflow-x hidden
+
+body
+  position relative
+  margin 0px
+  padding 0px
+  width 100%
+  height auto
   font-family: 'Montserrat', sans-serif;
   overflow-x hidden
 
@@ -16,10 +22,10 @@ h1, h2, h3, h4, h5
 
 .container
   width 100%
-  height 100%
+  height auto
   font-size 1.6rem
-
 nav
+  display none
   width 100%
   height 6rem
   padding-top 1rem
@@ -27,22 +33,57 @@ nav
     margin-left 10rem
     line-height 5rem
 
-img
-  opacity 0.9
-
 .img-container
+  position relative
   width 100%
-  height 60rem
-  img
-    display inline-block
+  height auto
+  //font-family 'Roboto', serif
+  h1
+    position absolute
     width 100%
-    min-height 35rem
+    top 0rem
+    height 5rem
+    padding-left 4rem
+    margin-bottom -20rem
+    line-height 5rem
+    font-size 2rem
+    color #fff
+    z-index 1000
+  .heading
+    position absolute
+    bottom 0rem
+    width 100%
+    height 100%
+    text-align center
+    font-weight bold
+    z-index 900
+    background-color rgba(0,0,0,.6)
+    color #fff//#343838
+    .heading-text
+      position absolute
+      bottom 0
+      width 100%
+      h3
+        font-size 5rem
+      p
+        font-size 3rem
+  .arrow
+    width 10rem
+    height 10rem
+  .header-image
+    width 100%
+    min-height 38rem
     height auto
+    opacity 0.8
+
 /* 3 column grid */
 .about
+  font-size 5rem
   width 100%
-  height 60rem
-  margin-top 10rem
+  height auto
+  min-height 60rem
+  margin-top 8rem
+  font-family: 'Roboto Condensed', sans-serif;
   .box-container
     width 100%
     height 100%
@@ -50,32 +91,44 @@ img
     .info-box
       display inline-block
       float left
-      margin-left 15rem
+      margin-left 0rem
       text-align center
-      width 40rem
+      width 33%
       height 100%
-      padding 1rem
-
+      padding 0rem
       img
         width 25rem
         height 25rem
         margin-bottom 1rem
         border-radius 50%
-      p
+      .description
         width 100%
-        height 20rem
+        height 15rem
         position relative
         bottom -1rem
         margin-top 2rem
-        font-size 2.2rem
+        font-size 3.5rem
+        // font-weight bold
+        opacity 1
+      .learn-more
+        font-size 3rem
+        width 30rem
+        line-height 10rem
+        height 10rem
+        background-color #D1E751//#A7E82E
+        margin 0 auto
+        margin-bottom 10rem
         opacity 0.8
-
 .get-in-touch
+  /* Clear floats from the top 3 elements */
+  clear both
   width 40rem
   height 10rem
   font-size 4rem
   margin 0 auto
+  // background-color hotpink
   ~ hr
+    //position relative
     width 52rem
     margin 0 auto
     height 1  px
@@ -85,8 +138,8 @@ img
   height 50rem
   padding 10rem
   margin 0 auto
+  font-family: 'Roboto Condensed', sans-serif;
   .map
-    display inline-block
     float left
     margin-left 10rem
   .address
@@ -95,3 +148,55 @@ img
   p
     font-size 2.2rem
     opacity 0.7
+
+/* Mobile version */
+
+/* Styles for contact info */
+@media(max-width 90rem)
+  .contact
+    width 100%
+    .map
+      margin 0
+
+@media(max-width 72rem)
+  .about
+    width inherit
+    .box-container
+      width inherit
+      .info-box
+        display block
+        width 100%
+        .description
+          height 10rem
+        .learn-more
+          width 100%
+          height 15rem
+          line-height 15rem
+  /*
+    Styles for map and adress
+    Don't display the map on phones
+  */
+  .contact
+    clear both
+    width 100%
+    text-align center
+    .map
+      display none
+    .address
+      position absolute
+      width 100%
+      left 12%
+      font-size 2.5rem
+    .col-left
+      float left
+    .col-rigth
+      float right
+    hr
+      display none
+
+@media(max-width 50rem)
+  .contact
+    height 20rem
+    .address
+      width 100%
+      left 5%
