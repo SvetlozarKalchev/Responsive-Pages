@@ -36,8 +36,6 @@ nav
 .img-container
   position relative
   width 100%
-  height auto
-  //font-family 'Roboto', serif
   h1
     position absolute
     width 100%
@@ -72,7 +70,7 @@ nav
     height 10rem
   .header-image
     width 100%
-    min-height 38rem
+    min-height 20rem
     height auto
     opacity 0.8
 
@@ -195,6 +193,24 @@ nav
       display none
 
 @media(max-width 50rem)
+  .img-container
+    .heading
+      .heading-text
+        h3
+          font-size 3rem
+    .arrow
+      width 5rem
+      height 5rem
+/* Make images and learn more buttons smaller on phones*/
+  .about
+    .box-container
+      .info-box
+        img
+          width 20rem
+          height 20rem
+        .learn-more
+          height 10rem
+          line-height 10rem
   .contact
     height 20rem
     .address
