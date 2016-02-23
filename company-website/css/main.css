@@ -1,1 +1,309 @@
-html{margin:0;padding:0;width:100%;height:auto;font-size:62.5%;overflow-x:hidden}body{position:relative;margin:0;padding:0;width:100%;height:auto;font-family:'Montserrat',sans-serif;overflow-x:hidden}h1,h2,h3,h4,h5{margin:0;padding:0}.container{width:100%;height:auto;font-size:1.6rem;font-family:'Ubuntu Condensed',sans-serif}nav{position:fixed;width:100%;height:6rem;background-color:#000;z-index:1000;line-height:6rem;decoration:none;}nav h1{position:absolute;left:4rem;color:#fff;font-size:2.2rem;font-family:'Montserrat',serif}nav .menu{position:absolute;right:10%;font-size:2rem;font-weight:bold}nav a{display:inline-block;width:10rem;height:6rem;text-align:center;text-decoration:none;margin-left:2rem}nav a:link{color:#fff}nav a:hover{background-color:#fff;color:#000}.img-container{position:relative;width:100%;max-height:60rem;padding-top:6rem;overflow:hidden;}.img-container .heading{position:absolute;width:100%;height:100%;bottom:0;text-align:center;font-weight:bold;z-index:900;color:#fff;background-color:rgba(0,0,0,0.3);}.img-container .heading .heading-text{position:absolute;width:100%;height:20rem;bottom:5%;text-align:center;}.img-container .heading .heading-text h3{font-size:5rem}.img-container .heading .heading-text p{font-size:2.5rem}.img-container .arrow{width:10rem;height:10rem}.img-container .header-image{width:100%;min-height:30rem}.about{font-size:5rem;width:100%;height:auto;min-height:60rem;margin-top:10rem;font-family:'Ubuntu Condensed',sans-serif;}.about .box-container{width:100%;height:100%;background-color:#fff;}.about .box-container .info-box{display:inline-block;float:left;margin-left:0;text-align:center;width:33%;height:100%;padding:0;}.about .box-container .info-box img{width:25rem;height:25rem;border-radius:50%}.about .box-container .info-box .description{width:90%;height:15rem;margin:0 auto;position:relative;margin-top:5rem;margin-bottom:2rem;font-size:3.5rem}.about .box-container .info-box .learn-more{font-size:3rem;width:30rem;line-height:10rem;height:10rem;background-color:#d1e751;margin:0 auto;margin-bottom:10rem}.get-in-touch{clear:both;width:80%;text-align:center;padding-top:5rem;padding-bottom:5rem;font-size:4rem;margin:0 auto;}.get-in-touch p{font-size:2.2rem}hr.git{width:100%;height:1px;background-color:#18acdd}.contact{width:80%;height:50rem;padding:10rem;margin:0 auto;}.contact .map{float:left;margin-left:10rem}.contact .address{float:right;margin-right:20rem}.contact p{font-size:2.2rem;opacity:.7}@media (max-width:90rem){.contact{width:100%;}.contact .map{margin:0}}@media (max-width:72rem){.about{width:inherit;}.about .box-container{width:inherit;}.about .box-container .info-box{display:block;width:100%;}.about .box-container .info-box .description{height:10rem}.about .box-container .info-box .learn-more{width:100%;height:15rem;line-height:15rem}.contact{clear:both;width:100%;text-align:center;}.contact .map{display:none}.contact .address{position:absolute;width:100%;left:12%;font-size:2.5rem}.contact .col-left{float:left}.contact .col-rigth{float:right}.contact hr{display:none}}@media (max-width:50rem){.img-container h1{font-size:1.2rem;padding-left:1.2rem}.img-container .heading .heading-text h3{font-size:3rem}.img-container .arrow{width:5rem;height:5rem}}.about .box-container .info-box img{width:20rem;height:20rem}.about .box-container .info-box .learn-more{height:10rem;line-height:10rem}.contact{height:20rem;}.contact .address{width:100%;left:5%}
+/* Variables */
+html {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: auto;
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+body {
+  position: relative;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: auto;
+  font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 100%;
+  font-size: 1.6rem;
+  font-family: 'Ubuntu Condensed', sans-serif;
+}
+/*
+  The menu is fixed.
+*/
+nav {
+  position: fixed;
+  width: 100%;
+  height: 6rem;
+  background-color: #000;
+  z-index: 1000;
+  line-height: 6rem;
+  decoration: none;
+}
+nav h1 {
+  position: absolute;
+  left: 4rem;
+  color: #fff;
+  font-size: 2.2rem;
+  font-family: 'Montserrat', serif;
+}
+nav img {
+  display: none;
+}
+nav .menu {
+  position: absolute;
+  right: 10%;
+  font-size: 2rem;
+  font-weight: bold;
+}
+nav a {
+  display: inline-block;
+  width: 10rem;
+  height: 6rem;
+  text-align: center;
+  text-decoration: none;
+  margin-left: 2rem;
+  color: #fff;
+}
+nav a:link {
+  color: #fff;
+}
+nav a:hover {
+  background-color: #fff;
+  color: #000;
+}
+/*
+  Header image container is always 100% wide, but resizes
+  horizontally.
+*/
+.img-container {
+  position: relative;
+  width: 100%;
+  max-height: 60rem;
+/* Add padding to account for the fixed menu height */
+  padding-top: 6rem;
+/* Make image self crop */
+  overflow: hidden;
+}
+.img-container .heading {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  text-align: center;
+  font-weight: bold;
+  z-index: 900;
+  color: #fff;
+  background-color: rgba(0,0,0,0.3);
+}
+.img-container .heading .heading-text {
+  position: absolute;
+  width: 95%;
+  height: 20rem;
+  bottom: 5%;
+  text-align: center;
+}
+.img-container .heading .heading-text h3 {
+  font-size: 5rem;
+}
+.img-container .heading .heading-text p {
+  font-size: 2.5rem;
+}
+.img-container .arrow {
+  width: 10rem;
+  height: 10rem;
+}
+.img-container .header-image {
+  width: 100%;
+  min-height: 30rem;
+}
+/* 3 column grid */
+.about {
+  font-size: 5rem;
+  width: 100%;
+  height: auto;
+  min-height: 60rem;
+  margin-top: 10rem;
+  font-family: 'Ubuntu Condensed', sans-serif;
+}
+.about .box-container {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+.about .box-container .info-box {
+  display: inline-block;
+  float: left;
+  margin-left: 0rem;
+  text-align: center;
+  width: 33%;
+  height: 100%;
+  padding: 0rem;
+}
+.about .box-container .info-box img {
+  width: 25rem;
+  height: 25rem;
+  border-radius: 50%;
+}
+.about .box-container .info-box .description {
+  width: 90%;
+  height: 15rem;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+  font-size: 3.5rem;
+}
+.about .box-container .info-box .learn-more {
+  font-size: 3rem;
+  width: 30rem;
+  line-height: 10rem;
+  height: 10rem;
+  background-color: #d1e751;
+  margin: 0 auto;
+  margin-bottom: 10rem;
+}
+.get-in-touch {
+/* Clear floats from the top 3 elements */
+  width: 80%;
+  text-align: center;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  font-size: 4rem;
+  margin: 0 auto;
+}
+.get-in-touch p {
+  font-size: 2.2rem;
+}
+hr.git {
+  width: 100%;
+  height: 1px;
+  background-color: #18acdd;
+}
+/* Footer */
+.contact {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding-top: 10rem;
+}
+.contact .map {
+  display: inline-block;
+  float: left;
+  margin-left: 15%;
+}
+.contact .address {
+  display: inline-block;
+  width: 30rem;
+  float: right;
+  margin-right: 15%;
+}
+.contact h2 {
+  font-size: 3.5rem;
+}
+.contact p {
+  font-size: 2.5rem;
+  opacity: 0.7;
+}
+/* Mobile version */
+/* Move map and contact info close to the screen edges. */
+@media (max-width: 1500px) {
+  .contact .map {
+    margin-left: 5%;
+  }
+  .contact .address {
+    margin-left: 5%;
+  }
+}
+/*
+  Move the info boxes to a row layout. Hide the map, there is no space for it */
+@media (max-width: 1200px) {
+  .about {
+    width: inherit;
+    margin-top: 5rem;
+  }
+  .about .box-container {
+    width: inherit;
+  }
+  .about .box-container .info-box {
+    display: block;
+    width: 100%;
+  }
+  .about .box-container .info-box .description {
+    height: 10rem;
+  }
+  .about .box-container .info-box .learn-more {
+    width: 100%;
+    height: 15rem;
+    line-height: 15rem;
+  }
+  .contact {
+    padding-top: 5rem;
+  }
+  .contact .map {
+    display: none;
+  }
+  .contact .address {
+    display: block;
+    float: none;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+  }
+}
+/* Mobile style for the menu*/
+@media (max-width: 1000px) {
+  .hamburger {
+    display: none;
+    position: fixed;
+    padding-top: 2rem;
+    right: 0 !important;
+    width: 100%;
+    height: 35rem;
+    background-color: #000;
+  }
+  .hamburger .hamburger-icon {
+    position: absolute;
+    right: 2rem;
+    height: 8rem;
+    width: 5rem;
+    display: inline;
+    background-color: #fff;
+    width: 10rem;
+  }
+  .hamburger a {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 8rem;
+    line-height: 8rem;
+    color: #fff;
+  }
+  .hamburger a:hover {
+    background-color: #fff;
+    color: #000;
+  }
+  .hamburger a:link {
+    color: #fff;
+  }
+}
+/* Make images and buttons smaller on mobile phones */
+@media (max-width: 800px) {
+  .img-container .heading .heading-text h3 {
+    font-size: 4rem;
+  }
+  .img-container .arrow {
+    width: 8rem;
+    height: 8rem;
+  }
+  .about .box-container .info-box img {
+    width: 20rem;
+    height: 20rem;
+  }
+  .about .box-container .info-box .learn-more {
+    width: 100%;
+    height: 10rem;
+    line-height: 10rem;
+  }
+}
