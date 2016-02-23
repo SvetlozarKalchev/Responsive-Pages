@@ -4,7 +4,9 @@
 transparent_black = rgba(0,0,0,.3)
 bitter_lemon = #E5F04C
 sulu = #D1E751//#B1CF72
-
+slim_black = 1px solid black
+font_montserrat = 'Montserrat', sans-serif;
+font_ubuntu = 'Ubuntu Condensed', sans-serif;
 html
   margin 0px
   padding 0px
@@ -19,7 +21,7 @@ body
   padding 0px
   width 100%
   height auto
-  font-family: 'Montserrat', sans-serif;
+  font-family font_montserrat
   overflow-x hidden
 
 h1, h2, h3, h4, h5
@@ -29,7 +31,7 @@ h1, h2, h3, h4, h5
 .container
   width 100%
   font-size 1.6rem
-  font-family: 'Ubuntu Condensed', sans-serif;
+  font-family font_ubuntu
 /*
   The menu is fixed.
 */
@@ -46,7 +48,7 @@ nav
     left 4rem
     color #fff
     font-size 2.2rem
-    font-family 'Montserrat', serif
+    font-family font_montserrat
   img
     display none
   .menu
@@ -114,7 +116,7 @@ nav
   height auto
   min-height 60rem
   margin-top 10rem
-  font-family: 'Ubuntu Condensed', sans-serif;
+  font-family: font_ubuntu
   .box-container
     width 100%
     height 100%
@@ -273,3 +275,29 @@ hr.git
           width 100%
           height 10rem
           line-height 10rem
+
+/****************************************
+Services page styles
+****************************************/
+table
+  width 80%
+  margin 0 auto
+  margin-top 5rem
+  margin-bottom 8rem
+  border slim_black
+  padding 2rem
+  font-size 1.8rem
+  tr
+    border slim_black
+    width 100%
+    height 5rem
+  th
+    border-bottom slim_black
+    background-color #fff
+    font-size 3rem
+    padding-bottom 2rem
+  td
+    padding 2rem
+    border-bottom slim_black
+  tr:nth-child(odd)
+    background-color sulu
