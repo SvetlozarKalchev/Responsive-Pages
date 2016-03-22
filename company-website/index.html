@@ -19,13 +19,13 @@
         <h1>Profin&ampTrade</h1>
       </div>
 
+      <img class="hamburger-icon" src="./img/whamb.png" alt="">
 
       <div class="menu hamburger">
-        <img class="hamburger-icon" src="./img/hamburger.png" alt="">
-        <a href="#">Начало</a>
+        <a href="./index.html">Начало</a>
         <a href="./services.html">Услуги</a>
+        <a href="./prices.html">Цени</a>
         <a href="#">Въпроси</a>
-        <a href="#">За нас</a>
         <a href="#">Контакт</a>
       </div>
 
@@ -57,7 +57,7 @@
           <p class="description">
             Абонаментни счетоводни услуги
           </p>
-          <p class="learn-more">Научи повече</p>
+          <a href="./services.html/#subscription"><p class="learn-more">Научи повече</p></a>
         </div>
 
         <div class="info-box">
@@ -65,7 +65,7 @@
           <p class="description">
             Услуги, свързани с нает персонал
           </p>
-          <p class="learn-more">Научи повече</p>
+          <a href="./services.html/#employees"><p class="learn-more">Научи повече</p></a>
         </div>
 
         <div class="info-box">
@@ -73,7 +73,7 @@
           <p class="description">
             Консултантски услуги
           </p>
-          <p class="learn-more">Научи повече</p>
+          <a href="./services.html/#other"><p class="learn-more">Научи повече</p></a>
         </div>
 
       </div>
@@ -119,8 +119,27 @@
   </div>
 
 </body>
-  <script>
-    window.scrollBy(100, 300000)
-    //window.scrollBy(100, 300)
-  </script>
+<script>
+  var menu = document.getElementsByClassName('hamburger')[0],
+    icon = document.getElementsByClassName('hamburger-icon')[0];
+
+  icon.onclick = function(e) {
+    var isOpen = menu.offsetHeight > 10 ? true : false;
+
+    // Get the menu height and make it the same as the img container
+    if(isOpen) {
+      // Change icon
+      icon.src = './img/whamb.png'
+      menu.style.display = "none";
+    }
+    else {
+      // Change icon
+      icon.src = './img/close.png'
+      menu.style.height = 400 + "px";
+      menu.style.display = "inline-block";
+    }
+  }
+
+  delete menu, icon;
+</script>
 </html>
